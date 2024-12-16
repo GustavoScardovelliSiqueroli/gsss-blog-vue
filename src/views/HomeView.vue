@@ -1,7 +1,7 @@
 <template>
   <div>
+    <BlogBanner></BlogBanner>
     <h1>TESTE</h1>
-    <div class="blog-banner"></div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga atque
       distinctio illum porro aspernatur, ut quae impedit. Iste soluta
@@ -32,21 +32,13 @@
     <p>TESTE STESDASDADASDASD</p>
   </div>
 </template>
-<style>
-.blog-banner {
-  position: fixed; /* Para começar no topo e ser independente do conteúdo */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 20rem;
+<script>
+import BlogBanner from "../components/BlogBanner.vue";
 
-  background: rgb(0, 31, 150);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 31, 150, 1) 0%,
-    rgba(0, 56, 150, 1) 35%,
-    rgba(0, 125, 150, 1) 100%
-  );
-  z-index: 1; /* Garantir que a navbar fique acima, se necessário */
-}
-</style>
+export default {
+  components: {
+    BlogBanner,
+  },
+};
+</script>
+<style></style>
