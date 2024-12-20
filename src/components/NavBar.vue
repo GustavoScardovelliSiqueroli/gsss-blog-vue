@@ -1,7 +1,7 @@
 <template>
   <header>
     <nav class="navbar">
-      <div class="container">
+      <div class="nav-container">
         <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
         <router-link to="/services">Services</router-link>
@@ -23,7 +23,7 @@ body {
 .navbar {
   width: 100%;
   height: 4rem;
-  background-color: #00000014;
+  background-color: #b0e1eb;
   position: fixed; /* Navbar fixa no topo */
   top: 0;
   left: 0;
@@ -34,7 +34,7 @@ body {
 }
 
 /* Container Centralizado */
-.container {
+.nav-container {
   width: 100%;
   max-width: 1200px; /* Limita a largura da navbar */
   margin: 0 auto;

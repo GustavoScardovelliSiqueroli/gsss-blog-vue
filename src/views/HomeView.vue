@@ -1,7 +1,18 @@
 <template>
   <div>
     <BlogBanner></BlogBanner>
-    <h1>TESTE</h1>
+    <h1>ULTIMOS POSTS</h1>
+    <div class="card-container">
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+      <Card></Card>
+    </div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga atque
       distinctio illum porro aspernatur, ut quae impedit. Iste soluta
@@ -34,11 +45,23 @@
 </template>
 <script>
 import BlogBanner from "../components/BlogBanner.vue";
+import Card from "../components/Card.vue";
 
 export default {
   components: {
     BlogBanner,
+    Card,
   },
 };
 </script>
-<style></style>
+<style>
+.card-container {
+  /* background-color: red; */
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0;
+  /* align-items: center; */
+}
+</style>
