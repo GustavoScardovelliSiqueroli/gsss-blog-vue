@@ -3,15 +3,11 @@
     <BlogBanner></BlogBanner>
     <h1>ULTIMOS POSTS</h1>
     <div class="card-container">
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
-      <Card></Card>
+      <Card
+        v-for="post in posts"
+        :title="post.title"
+        :previewMsg="post.body"
+      ></Card>
     </div>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet fuga atque
@@ -51,6 +47,29 @@ export default {
   components: {
     BlogBanner,
     Card,
+  },
+  data() {
+    return { posts: [] };
+  },
+  async mounted() {
+    let allPosts = await this.getPosts();
+    this.setPosts(allPosts);
+  },
+  methods: {
+    getPosts() {
+      return fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((data) => {
+          return data;
+        });
+    },
+    setPosts(posts) {
+      if (posts.length > 9) {
+        this.posts = posts.slice(0, 9);
+        return;
+      }
+      this.posts = posts;
+    },
   },
 };
 </script>

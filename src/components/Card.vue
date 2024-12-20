@@ -5,18 +5,31 @@
         <i class="fa fa-address-book" aria-hidden="true"></i>
       </div>
     </div>
-    <b>TESTE ADASDASDSD ADASDASDSD ASDASDASDASDASD ADASDAAS</b>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-      voluptate dolorem quidem tempore, quis maxime recusandae dolorum corrupti
-      tempora debitis doloribus asperiores perspiciatis quia aliquam explicabo
-      et ea culpa assumenda!
-    </p>
+    <b>{{ title }}</b>
+    <p>{{ preview }}</p>
   </div>
 </template>
 <script>
 export default {
   name: "Card",
+  props: {
+    title: {
+      type: String,
+      default: "",
+    },
+    previewMsg: {
+      type: String,
+      default: "",
+    },
+  },
+  computed: {
+    preview() {
+      if (this.previewMsg.length > 100) {
+        return this.previewMsg.substring(0, 100) + "...";
+      }
+      return this.previewMsg;
+    },
+  },
 };
 </script>
 <style>
