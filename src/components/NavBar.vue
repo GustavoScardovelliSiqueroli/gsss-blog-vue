@@ -1,19 +1,25 @@
 <template>
   <header>
     <nav class="navbar">
+      <div class="nav-left"></div>
       <div class="nav-container">
-        <div class="nav-item">
-          <router-link to="/">Inicio</router-link>
-        </div>
-        <div class="nav-item">
-          <router-link to="/about">Postagens</router-link>
-        </div>
-        <div class="nav-item">
-          <router-link to="/services">Tópicos</router-link>
-        </div>
-        <div class="nav-item">
-          <router-link to="/contact">Sobre</router-link>
-        </div>
+        <router-link to="/">
+          <div class="nav-item">Inicio</div>
+        </router-link>
+        <router-link to="/about">
+          <div class="nav-item">Postagens</div>
+        </router-link>
+        <router-link to="/services">
+          <div class="nav-item">Tópicos</div>
+        </router-link>
+        <router-link to="/contact">
+          <div class="nav-item">Sobre</div>
+        </router-link>
+      </div>
+      <div class="nav-right">
+        <router-link to="/login">
+          <i class="fa fa-user-circle" aria-hidden="true"></i>
+        </router-link>
       </div>
     </nav>
   </header>
@@ -39,7 +45,28 @@ body {
   display: flex;
   align-items: center;
 }
-
+.nav-left,
+.nav-right {
+  width: 20vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-right i {
+  font-size: 2rem;
+  margin-right: 4rem;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: 0.3s ease;
+  color: #333;
+}
+.nav-right i:hover {
+  color: #c338c4;
+  /* outline: 4px solid #c338c4; */
+  transform: scale(1.4);
+  background-color: white;
+}
 /* Container Centralizado */
 .nav-container {
   width: 100%;
@@ -54,14 +81,14 @@ body {
 
 /* Links de Navegação */
 
-.nav-item a {
+.nav-container a {
   text-decoration: none;
   font-weight: bold;
-  margin: 0 0.5rem;
   transition: color 0.3s ease;
   color: #333 !important;
+  width: 100%;
+  height: 100%;
 }
-
 .nav-item {
   height: 100%;
   width: 100%;
