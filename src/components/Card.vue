@@ -61,7 +61,7 @@ export default {
   );
 }
 .card:hover {
-  outline: 4px solid #b0e1eb;
+  outline: 4px solid #c338c4;
 }
 .card-icon {
   height: 100%;
