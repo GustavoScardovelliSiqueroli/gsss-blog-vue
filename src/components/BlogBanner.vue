@@ -49,7 +49,6 @@
     );
   background-size: 80px 80px; /* Quadrados maiores para suavizar o visual */
   background-position: 0 0, 40px 40px;
-  color: #b0e1eb;
   z-index: 1;
   display: flex;
   justify-content: center;

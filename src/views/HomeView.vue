@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home">
     <BlogBanner></BlogBanner>
     <h1>ULTIMOS POSTS</h1>
     <div class="card-container">
@@ -82,5 +82,8 @@ export default {
   justify-content: center;
   margin: 1rem 0;
   /* align-items: center; */
+}
+.home {
+  padding: 24.5rem 1rem 2rem;
 }
 </style>

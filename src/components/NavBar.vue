@@ -6,13 +6,13 @@
         <router-link to="/">
           <div class="nav-item">Inicio</div>
         </router-link>
-        <router-link to="/about">
+        <router-link to="/postagens">
           <div class="nav-item">Postagens</div>
         </router-link>
-        <router-link to="/services">
+        <router-link to="/topicos">
           <div class="nav-item">Tópicos</div>
         </router-link>
-        <router-link to="/contact">
+        <router-link to="/sobre">
           <div class="nav-item">Sobre</div>
         </router-link>
       </div>
